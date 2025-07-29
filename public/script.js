@@ -1,3 +1,15 @@
+import {
+  imgPelotita,
+  imgTabiCoin,
+  imgGgCoin,
+  coinSound,
+  imgOso,
+  imgNotge,
+  imgShiface,
+  personajeDerechaImg,
+  personajeIzquierdaImg
+} from '../src/resources.js';
+
 // ==============================
 // CONFIGURACIÓN INICIAL
 // ==============================
@@ -6,17 +18,6 @@ const menuInicio = document.getElementById('menuInicio');
 const btnIniciar = document.getElementById('btnIniciar');
 const canvas = document.getElementById('juegoCanvas');
 const ctx = canvas.getContext('2d');
-
-const imgPelotita = new Image();
-imgPelotita.src = 'shiro.png'; // Asegúrate que la ruta sea correcta
-
-const imgTabiCoin = new Image();
-imgTabiCoin.src = 'tabitoken.png';
-
-const imgGgCoin = new Image();
-imgGgCoin.src = 'ggtoken.png';
-
-const coinSound = new Audio('coinsound.mp3'); // Asegúrate de que la ruta sea correcta
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -51,15 +52,6 @@ let monedas = []; // Array para almacenar las monedas
 
 const obstaculos = [];
 const particulas = [];
-
-const imgOso = new Image();
-imgOso.src = 'osito.png'; // ← aquí pones tu ruta correcta
-
-const imgNotge = new Image();
-imgNotge.src = 'notge.png'; // ← aquí pones tu ruta correcta
-
-const imgShiface = new Image();
-imgShiface.src = 'shiface.png'; // ← aquí pones tu ruta correcta
 
 let tiposObstaculo = ['notge', 'oso', 'shiface'];
 let velocidadObstaculo = 2;
@@ -671,13 +663,6 @@ function dibujarTexto() {
 
   ctx.restore();
 }
-
-// Carga tu personaje
-const personajeDerechaImg = new Image();
-personajeDerechaImg.src = 'angryshiro.png'; // <-- aquí va tu imagen
-
-const personajeIzquierdaImg = new Image();
-personajeIzquierdaImg.src = 'angryshiro2.png'; // <-- aquí va tu imagen
 
 function mostrarGameOver() {
   // Fondo apagado
